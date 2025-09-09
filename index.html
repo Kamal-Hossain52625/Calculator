@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- password section -->
+    <div class="col-md-5 mt-5 offset-md-3 p-5 bg-info">
+      <div class="input-group ">
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          placeholder="Enter Password"
+          aria-describedby="basic-addon2"
+        />
+        <span
+          class="input-group-text eye_wrapper"
+          id="basic-addon2"
+          style="cursor: pointer"
+        >
+          <i class="fa-solid fa-eye eye" id="eye"></i>
+          <i class="fa-solid fa-eye-slash slash_eye d-none" id="slash"></i>
+        </span>
+      </div>
+
+      <div class="mt-3" id="result"></div>
+    </div>
+
+    <!-- Arrays -->
+    <div
+      class="col-md-5 offset-md-3 text-info bg-dark p-3"
+      id="container"
+    ></div>
+
+    <div class="col-md-5 offset-md-3 p-3 num_wrapper bg-primary-subtle" id="container2">
+    </div>
+
+    <!-- Calculator -->
+    <div class="col-md-5 offset-md-3 p-3 bg-info">
+      <div class="calculator">
+        <input type="text" placeholder="00" id="display" disabled />
+        <div class="buttons">
+          <button onclick="clearDisplay()">C</button>
+          <button onclick="appendValue('(')">(</button>
+          <button onclick="appendValue(')')">)</button>
+          <button onclick="backspace()">Del</button>
+
+          <button onclick="appendValue('7')">7</button>
+          <button onclick="appendValue('8')">8</button>
+          <button onclick="appendValue('9')">9</button>
+          <button onclick="appendValue('/')">÷</button>
+
+          <button onclick="appendValue('4')">4</button>
+          <button onclick="appendValue('5')">5</button>
+          <button onclick="appendValue('6')">6</button>
+          <button onclick="appendValue('*')">×</button>
+
+          <button onclick="appendValue('1')">1</button>
+          <button onclick="appendValue('2')">2</button>
+          <button onclick="appendValue('3')">3</button>
+          <button onclick="appendValue('-')">−</button>
+
+          <button onclick="appendValue('0')">0</button>
+          <button onclick="appendValue('.')">.</button>
+          <button onclick="calculate()">=</button>
+          <button onclick="appendValue('+')">+</button>
+
+          <!-- Scientific functions -->
+          <button onclick="appendFunc('Math.sin(')">sin</button>
+          <button onclick="appendFunc('Math.cos(')">cos</button>
+          <button onclick="appendFunc('Math.tan(')">tan</button>
+          <button onclick="appendFunc('Math.log10(')">log</button>
+
+          <button onclick="appendFunc('Math.sqrt(')">√</button>
+          <button onclick="appendFunc('Math.pow(')">x<sup>y</sup></button>
+          <button onclick="appendFunc('Math.PI')">π</button>
+          <button onclick="appendFunc('Math.E')">e</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
