@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Scientific Calculator</title>
 
+    <link rel="icon" type="image/png" href="./fav.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -21,6 +23,50 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+     <!-- Navbar section -->
+      <section class="section_nav">
+        <nav id="navbar" class="navbar p-3 navbar-expand-lg bg-dark">
+          <div class="container-fluid">
+            
+            <div class="col-md-3 col-lg-3 col-sm-12">
+              <img class="" src="" alt="">
+              <a class="navbar-brand text-white " href="#">
+                
+              </a>
+              
+            </div>
+            <div class="collapse navbar-collapse col-md-6 col-lg-6 col-sm-12" id="navbarNavAltMarkup">
+              <div class="navbar-nav text-white gap-3">
+                <a class="nav-link active text-white fs-5"aria-current="page" href="#container" >Home</a>
+                <a class="nav-link text-white fs-5" href="#inputwidth">Result</a>
+                <a class="nav-link text-white fs-5" href="#calculate">Calculate</a>
+                <a class="nav-link text-white fs-5" href="#footer">Contact us</a>
+              </div>
+            </div>
+
+            <div class="nav_search col-md-3 col-lg-3 col-sm-12 ">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+            <button
+                class="navbar-toggler justify-content-end"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon justify-content-end"></span>
+              </button>
+          </div>
+
+          </div>
+        </nav>
+
+          
+      </section>
     <!-- password section -->
     <div class="col-md-5 mt-5 offset-md-3 p-5 bg-info">
       <div class="input-group ">
@@ -54,7 +100,7 @@
     </div>
 
     <!-- Calculator -->
-    <div class="col-md-5 offset-md-3 p-3 bg-info">
+    <div class="col-md-5 offset-md-3 p-3 bg-info" id="calculate">
       <div class="calculator">
         <input type="text" placeholder="00" id="display" disabled />
         <div class="buttons">
@@ -96,6 +142,163 @@
         </div>
       </div>
     </div>
+
+    <!-- Result system -->
+    <section class="Grading-point">
+      <div class="container bg-success text-white p-5 col-md-5 offset-md-3">
+        <div class="row d-flex justify-content-center">
+          <div class="input-group mb-3" id="inputwidth">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter Your Result"
+              id="result9"
+            />
+            <button
+              class="btn btn-outline-light"
+              type="submit"
+              id="click"
+            >
+              Submit
+            </button>
+          </div>
+
+          <div class="text-center">
+            <h3 id="output" class  =""></h3>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="bg-black text-white">
+      <div class="footer-inner">
+        <div class="container">
+          <div class="row py-5">
+
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="text4">
+                
+                <h4 class="widget-title pt-5">About us</h4>
+                <div>
+                  <p>
+                    info@kamal.com is a friendly dating theme based on BuddyPress for the
+                    community functionality. It allows you to easily create a
+                    community for dating.
+                  </p>
+                </div>
+              </div>
+              <div class="text5">
+                <h4 class="widget-title">Address</h4>
+                <div>
+                  <p>
+                    Ahmed Nagar, Paikpara <br />
+                    Mirpur-1, Dhaka-1216.
+                  </p>
+                </div>
+              </div>
+              <div class="text6">
+                <h4 class="widget-title">Contact</h4>
+                <div>
+                  <p>
+                    +88 0164 5515 443 <br />
+                    info@kamal.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h4 class="widget-title fotter-middle">Interests</h4>
+
+              <ul class="rainbow ">
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-green text-uppercase mb-1 ">Art and Love</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-blue text-uppercase mb-1">Attraction</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-violet text-uppercase mb-1">Creative</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-emerald  text-uppercase mb-1">Entertainment</a
+                  >
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-green text-uppercase mb-1">Food</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-salmon text-uppercase mb-1">Health</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-magenta text-uppercase mb-1">Hobbies</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-sky  text-uppercase mb-1">Life Style</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-sapphire text-uppercase mb-1">Love Stories</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-brown text-uppercase mb-1">Passion</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-blue text-uppercase mb-1">Philosophy</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-red text-uppercase mb-1">Sport</a>
+                </li>
+                <li class="art-and-love">
+                  <a href="#" class="btn btn2 btn-tag-emerald text-uppercase mb-1">Thug Life</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12"></div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <h4 class="widget-title">Communication</h4>
+
+              <form class="fotter-form"  action="required" >
+                <div class="email">
+                  Your Name <br>
+                <input id="Name" type="text" placeholder="Enter your Name" />
+                </div>
+
+                <div>
+                   Your Message <br>
+                  <textarea
+                  name=""
+                  id="textarea"
+                  placeholder="Type Your Message"
+                  ></textarea>
+                </div>
+
+                <div id="EmailContainer">
+                  For Every Update. <br>
+                  <input id="Email" type="email" placeholder="Enter Email" required>
+                  <a href="#" id="Subscribe">Subscribe</a>
+                 
+                </div>
+
+                
+              </form>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

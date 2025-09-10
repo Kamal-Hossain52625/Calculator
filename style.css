@@ -1,3 +1,74 @@
+
+
+
+a {
+  text-decoration: none;
+  touch-action: manipulation;
+  color: #fff;
+}
+li {
+  list-style: none;
+}
+
+#navbar {
+
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease; 
+}
+
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000; 
+}
+
+
+body {
+  margin-top: 55px; 
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: #0DCAF0 !important;
+  scale: 1.1;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 10%;
+  width: 0px;
+  height: 2px;
+  background: #0DCAF0;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+.nav-link:hover::after {
+  width: calc(100% - 20%);
+}
+.navbar-toggler-icon {
+  position: absolute;
+  right: 10px;
+  top: 3rem;
+  border-radius: 5px;
+  background-color: #00d9ff;
+  border: 3px solid red;
+  filter: invert(100%);
+  size: 1rem;
+}
+
+
+
+
 #fruits {
   background: #616161;
   border-radius: 8px;
@@ -39,4 +110,130 @@ button {
 }
 button:hover {
   background: #757575;
+}
+
+/* Footer */
+
+.btn-tag-green {
+  color: #28a745;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-green:hover {
+  background-color: #28a745;
+}
+.btn-tag-blue {
+  color: #007bff;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-blue:hover {
+  background-color: #007bff;
+}
+.btn-tag-violet {
+  color: #a66ff7;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-violet:hover {
+  background-color: #a66ff7;
+}
+.btn-tag-emerald {
+  color: #1ad6ac;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-emerald:hover {
+  background-color: #1ad6ac;
+}
+.btn-tag-salmon {
+  color: #ff788c;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-salmon:hover {
+  background-color: #ff788c;
+}
+.btn-tag-magenta {
+  color: #f81895;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-magenta:hover {
+  background-color: #f81895;
+}
+.btn-tag-sky {
+  color: #04bbf1;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-sky:hover {
+  background-color: #04bbf1;
+}
+.btn-tag-sapphire {
+  color: #416aef;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-sapphire:hover {
+  background-color: #416aef;
+}
+.btn-tag-brown {
+  color: #cc7401;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-brown:hover {
+  background-color: #cc7401;
+}
+.btn-tag-red {
+  color: #dc3545;
+  background-color: rgba(255, 120, 140, 0.1);
+}
+.btn-tag-red:hover {
+  background-color: #dc3545;
+}
+
+#EmailContainer {
+  position: relative;
+  margin-top: 2rem;
+}
+.footer-form ::placeholder {
+  color: #e2e2e2;
+}
+
+#Name {
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  background-color: #747272da;
+  color: #fff;
+  width: 100%;
+}
+#Email {
+  padding: 10px 60px 10px 10px;
+  outline: none;
+  border-radius: 5px;
+  background-color: #747272da;
+  color: #fff;
+  width: 100%;
+}
+.email {
+  margin-bottom: 2rem;
+}
+#textarea {
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  background-color: #747272da;
+  color: #fff;
+  width: 100%;
+}
+#Subscribe {
+  position: absolute;
+  border: none;
+  background-color: #1ad6ac;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 5px;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+}
+#Subscribe:hover {
+  background-color: red;
 }

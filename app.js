@@ -1,3 +1,21 @@
+// Get the navbar element
+const navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+const sticky = navbar.offsetTop;
+
+// Define the scroll function
+function handleScroll() {
+  if (window.scrollY >= 100) {
+    navbar.classList.add("fixed-top");
+  } else {
+    navbar.classList.remove("fixed-top");
+  }
+}
+
+// Attach the scroll event listener to the window
+window.addEventListener("scroll", handleScroll);
+
 // let eye_wrapper = document.querySelector('.eye_wrapper');
 // let eye = document.querySelector('.eye');
 // let slash_eye = document.querySelector('.slash_eye');
@@ -75,10 +93,12 @@ const carList = document.createElement("div");
 carList.innerHTML = "<h5 class='text-light'>Cars</h5>" + cars.join("<br>");
 
 const flowerList = document.createElement("div");
-flowerList.innerHTML = "<h5 class='text-light'>Flower</h5>" + flowers.join("<br>");
+flowerList.innerHTML =
+  "<h5 class='text-light'>Flower</h5>" + flowers.join("<br>");
 
 const fruitList = document.createElement("div");
-fruitList.innerHTML = "<h5 class='text-light'>Fruits</h5>" + fruits.join("<br>");
+fruitList.innerHTML =
+  "<h5 class='text-light'>Fruits</h5>" + fruits.join("<br>");
 
 const birdList = document.createElement("div");
 birdList.innerHTML = "<h5 class='text-light'>Birds</h5>" + birds.join("<br>");
@@ -96,13 +116,11 @@ cars.unshift("Apple");
 
 console.log(cars.lastIndexOf("Audi"));
 
-/* Numbers */ 
+/* Numbers */
 const number = [0, 1, 20, 10, 800, 50, 25, 70];
 const number2 = [0, 1, 20, 10, 800, 50, 25, 70];
 const number3 = [0, 1, 20, 10, 800, 50, 25, 70];
 const multiply = number.flatMap((x) => [x * 10]);
-
-
 
 number2.sort(function (a, b) {
   return b - a;
@@ -112,25 +130,18 @@ number3.sort(function (a, b) {
   return a - b;
 });
 
-
-
-
 container2.style.display = "flex-left";
 container2.style.gap = "20px";
-
 
 const numList = document.createElement("div");
 numList.innerHTML = "" + number.join(", ");
 
-
 container2.appendChild(numList);
 
-
 const num2List = document.createElement("div");
-num2List.innerHTML = ""+ multiply + number2.join("<br>");
+num2List.innerHTML = "" + multiply + number2.join("<br>");
 
 container2.appendChild(num2List);
-
 
 const num3List = document.createElement("div");
 num3List.innerHTML = "" + number3.join(", ");
@@ -150,8 +161,6 @@ container2.appendChild(num3List);
 //   return b - a;
 // });
 // document.getElementById("para2").innerHTML = number;
-
-
 
 /* Calculator*/
 
@@ -180,3 +189,37 @@ function calculate() {
     display.value = "Error";
   }
 }
+
+var button = document.getElementById("click");
+var result9 = document.getElementById("result9");
+var output = document.getElementById("output");
+
+button.addEventListener("click", function() {
+  let rs = result9.value;
+
+  if (rs >= 80 && rs < 100) {
+    output.innerHTML = "A+";
+    output.style.color = "white"
+  } else if (rs >= 70 && rs < 80) {
+    output.innerHTML = "A";
+    output.style.color = "white"
+  } else if (rs >= 60 && rs < 70) {
+    output.innerHTML = "A-";
+    output.style.color = "white"
+  } else if (rs >= 50 && rs < 60) {
+    output.innerHTML = "B";
+    output.style.color = "white"
+  } else if (rs >= 40 && rs < 50) {
+    output.innerHTML = "C";
+    output.style.color = "white"
+  } else if (rs >= 33 && rs < 40) {
+    output.innerHTML = "D";
+    output.style.color = "white"
+  } else if (rs >= 0 && rs < 32) {
+    output.innerHTML = "Fail";
+    output.style.color = "red";
+  } else {
+    output.innerHTML = "Invalid Result.";
+    output.style.color = "red";
+  }
+});
